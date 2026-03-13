@@ -1,0 +1,128 @@
+.elevate {
+    margin-top: 30px;
+}
+
+.elevate .container {
+    text-align: center;
+}
+
+.elevate .container img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.elevate .container .shopNow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 18px 24px;
+    background-color: #1F1F1F;
+    text-decoration: none;
+    border: 2px dashed #262626;
+    color: aliceblue;
+    border-radius: 12px;
+
+    transform: translateY(-30px);
+}
+
+.elevate .container .shopNow img {
+    width: 16px;
+}
+
+.styleloom .container {
+    margin-top: -90px;
+    padding: 30px 0;
+    display: flex;
+}
+
+.styleloom .container .left,
+.styleloom .container .right {
+    flex: 1;
+}
+
+.styleloom .container .left {
+    width: 50%;
+    display: inline-block;
+    border-left: 2px dashed #262626;
+    border-right: 2px dashed #262626;
+    border-bottom: 2px dashed #262626;
+}
+
+.styleloom .container .left ul {
+    list-style-type: none;
+}
+
+.styleloom .container .left ul li {
+    display: inline-block;
+    font-size: 18px;
+    color: #B3B3B2;
+    padding: 14px 24px;
+    border: 2px dashed #333333;
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    border-radius: 12px;
+}
+
+.styleloom .container .left h1 {
+    font-size: 45px;
+    text-transform: uppercase;
+    color: aliceblue;
+    margin-left: 15px;
+}
+
+.styleloom .container .left p {
+    margin-left: 15px;
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #676665;
+}
+
+.styleloom .container .right {
+    border-right: 2px dashed #262626;
+    border-bottom: 2px dashed #262626;
+    width: 50%;
+}
+
+
+.styleloom .container .right .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+}
+
+/* 1 карточка — только снизу */
+.styleloom .right .cards .card:nth-child(1) {
+    border-bottom: 2px dashed #262626;
+}
+
+/* 2 карточка — слева и снизу */
+.styleloom .right .cards .card:nth-child(2) {
+    border-left: 2px dashed #262626;
+    border-bottom: 2px dashed #262626;
+}
+
+/* 3 карточка — справа */
+.styleloom .right .cards .card:nth-child(3) {
+    border-right: 2px dashed #262626;
+}
+
+.styleloom .container .right .cards .card .info {
+    margin-top: 45px;
+    padding-left: 30px;
+}
+
+.styleloom .container .right .cards .card .info h1 {
+    color: #fff;
+    font-size: 45px;
+}
+
+.styleloom .container .right .cards .card .info p {
+    color: #81807E;
+    font-size: 18px;
+    margin-top: 15px;
+}
