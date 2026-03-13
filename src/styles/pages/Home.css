@@ -47,6 +47,8 @@
     border-left: 2px dashed #262626;
     border-right: 2px dashed #262626;
     border-bottom: 2px dashed #262626;
+    border-radius: 0 0 0 12px;
+
 }
 
 .styleloom .container .left ul {
@@ -86,6 +88,7 @@
     border-right: 2px dashed #262626;
     border-bottom: 2px dashed #262626;
     width: 50%;
+    border-radius: 0 0 12px 0;
 }
 
 
