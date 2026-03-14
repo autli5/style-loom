@@ -1,5 +1,11 @@
+import "../styles/components/Footer.css"
+
 export default function Footer() {
     return (
-        <h1>Footer</h1>
+        <footer>
+            <div className="container">
+                <h1>Footer</h1>
+            </div>
+        </footer>
     );
 }

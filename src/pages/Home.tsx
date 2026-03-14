@@ -54,6 +54,36 @@ export default function App() {
           </div>
         </div>
       </div>
+      <div className="crafting">
+        <div className="container">
+          <div className="top">
+            <h1>Crafting Trends, Inspiring Confidence</h1>
+            <p>Explore a world of fashion at StyleLoom, where trends meet affordability.</p>
+          </div>
+          <div className="bottom">
+            <div className="cards">
+              <div className="card">
+                <h1>Привет</h1>
+              </div>
+              <div className="card">
+                <h1>Привет</h1>
+              </div>
+              <div className="card">
+                <h1>Привет</h1>
+              </div>
+              <div className="card">
+                <h1>Привет</h1>
+              </div>
+              <div className="card">
+                <h1>Привет</h1>
+              </div>
+              <div className="card">
+                <h1>Привет</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
