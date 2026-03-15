@@ -1,0 +1,205 @@
+.explore {
+    margin-top: 80px;
+}
+
+.explore .container {
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    border: 2px dashed #333;
+}
+
+/* общий layout */
+.explore .top {
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2px dashed #333; */
+}
+
+/* текст */
+.explore .top .text {
+    padding-left: 60px;
+    padding-top: 90px;
+    max-width: 800px;
+}
+
+.explore .top .text h1 {
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.explore .top .text p {
+    font-size: 18px;
+    color: #676665;
+    margin-bottom: 30px;
+}
+
+/* категории */
+.explore .top ul {
+    list-style: none;
+}
+
+.explore .top ul li {
+    font-weight: 600;
+    display: inline-block;
+    padding: 12px 22px;
+    margin-right: 10px;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    color: #B3B3B2;
+}
+
+.explore .top ul li.active {
+    border: none;
+    background-color: #C2B4A3;
+    color: #0F0F0F;
+}
+
+
+/* картинка без отступов */
+.explore .top img {
+    display: block;
+}
+
+.explore .bottom {
+    border-radius: 0 0 12px 12px;
+}
+
+.dress .container,
+.accessories .container {
+    border-left: 2px dashed #333;
+    border-right: 2px dashed #333;
+    border-bottom: 2px dashed #333;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between; /* левый и правый блок по краям */
+    align-items: center;            /* вертикальное центрирование */
+}
+
+.dress .container h1,
+.accessories .container .left h1 {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.dress .container .right button,
+.accessories .container .right button {
+    border: none;
+    padding: 18px 24px;
+    background-color: #1F1F1F;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    display: flex;       /* текст + картинка в одну линию */
+    align-items: center; /* вертикальное центрирование текста и картинки */
+    gap: 8px;            /* расстояние между текстом и изображением */
+    cursor: pointer;
+}
+
+/* контейнер dressCards */
+.dressCards .container {
+    border-left: 2px dashed #333;
+    border-right: 2px dashed #333;
+    border-bottom: 2px dashed #333;
+}
+
+/* контейнер карточек через Grid */
+.dressCards .container .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+    gap: 20px; /* расстояние между карточками */
+}
+
+/* каждая карточка */
+.dressCards .container .cards .card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dressCards .container .cards .card:nth-child(1),
+.dressCards .container .cards .card:nth-child(2) {
+    border-right: 2px dashed #333;
+}
+
+
+/* изображение */
+.dressCards .container .cards .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+/* верхняя часть карточки (тэг + кнопка) */
+.dressCards .container .cards .card .cardTop {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dressCards .container .cards .card .cardTop .tag {
+    background-color: #1A1A1A;
+    padding: 10px 16px;
+    border-radius: 100px;
+    border: 2px dashed #333;
+    color: #B3B3B2;
+}
+
+.dressCards .container .cards .card .cardTop .shopBtn {
+    background-color: #1A1A1A;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: #B3B3B2;
+    text-decoration: none;
+}
+
+.dressCards .container .cards .card .cardBottom h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* мета-информация */
+.dressCards .container .cards .card .cardBottom .meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #81807E;
+}
+
+.dressCards .container .cards .card .cardBottom .nameFit {
+    color: #fff;
+    font-weight: 600;
+}
+
+.dressCards .container .cards .card .cardBottom .shar {
+    width: 5px;
+    height: 5px;
+    background: #333;
+    border-radius: 50%;
+}
+
+/* расстояние между Fit и Price */
+.dressCards .container .cards .card .cardBottom .space {
+    width: 16px;
+}
+
+/* адаптив: планшет 2 карточки в ряд */
+@media (max-width: 1024px) {
+    .dressCards .container .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* адаптив: мобильный 1 карточка в ряд */
+@media (max-width: 600px) {
+    .dressCards .container .cards {
+        grid-template-columns: 1fr;
+    }
+}

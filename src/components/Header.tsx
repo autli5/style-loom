@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 import "../styles/components/Header.css"
 
 import logo from "../assets/logo.svg"
@@ -9,8 +11,12 @@ export default function Header() {
             <div className="container">
                 <div className="left">
                     <ul>
-                        <li className="active">Home</li>
-                        <li className="linkLeft">Products</li>
+                        <NavLink to="/">
+                        {({ isActive }) => <li className={isActive ? "active" : ""}>Home</li>}
+                        </NavLink>
+                        <NavLink to="/products">
+                        {({ isActive }) => <li className={isActive ? "active" : ""}>Products</li>}
+                        </NavLink>
                     </ul>
                 </div>
                 <div className="center">

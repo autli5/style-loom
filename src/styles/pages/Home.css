@@ -56,6 +56,7 @@
 }
 
 .styleloom .container .left ul li {
+    font-weight: 600;
     display: inline-block;
     font-size: 18px;
     color: #B3B3B2;
@@ -144,6 +145,7 @@
 }
 
 .crafting .container .top h1 {
+    color: #fff;
     text-transform: uppercase;
     margin-top: 30px;
     margin-left: 30px;
@@ -187,6 +189,7 @@
 
 .crafting .container .bottom .cards .card .info h1 {
     font-size: 30px;
+    color: #fff;
 }
 
 .crafting .container .bottom .cards .card .info p {
@@ -297,4 +300,161 @@
 .navigating .bottom .card:nth-child(2),
 .navigating .bottom .card:nth-child(3) {
     border-right: 2px dashed #333;
+}
+
+.elevateStyle {
+    margin-top: 80px;
+}
+
+.elevateStyle .container {
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    border: 2px dashed #333;
+}
+
+/* общий layout */
+.elevateStyle .top {
+    border-bottom: 2px dashed #333;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2px dashed #333; */
+}
+
+/* текст */
+.elevateStyle .top .text {
+    padding-left: 60px;
+    padding-top: 90px;
+    max-width: 800px;
+}
+
+.elevateStyle .top .text h1 {
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.elevateStyle .top .text p {
+    font-size: 18px;
+    color: #676665;
+    margin-bottom: 30px;
+}
+
+/* категории */
+.elevateStyle .top ul {
+    list-style: none;
+}
+
+.elevateStyle .top ul li {
+    font-weight: 600;
+    display: inline-block;
+    padding: 12px 22px;
+    margin-right: 10px;
+    border: 2px dashed #333;
+    border-radius: 10px;
+    color: #B3B3B2;
+}
+
+.elevateStyle .top ul li.active {
+    border: none;
+    background-color: #C2B4A3;
+    color: #0F0F0F;
+}
+
+
+/* картинка без отступов */
+.elevateStyle .top img {
+    display: block;
+}
+
+.elevateStyle .bottom {
+    border-radius: 0 0 12px 12px;
+}
+
+.elevateStyle .bottom .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.elevateStyle .container .bottom .cards .card {
+    padding: 30px;
+}
+
+
+.elevateStyle .container .bottom .cards .card:nth-child(1),
+.elevateStyle .container .bottom .cards .card:nth-child(2),
+.elevateStyle .container .bottom .cards .card:nth-child(4),
+.elevateStyle .container .bottom .cards .card:nth-child(5) {
+    border-right: 2px dashed #333;
+}
+
+.elevateStyle .container .bottom .cards .card:nth-child(1),
+.elevateStyle .container .bottom .cards .card:nth-child(2),
+.elevateStyle .container .bottom .cards .card:nth-child(3) {
+    border-bottom: 2px dashed #333;
+}
+
+
+.elevateStyle .container .bottom .cards .card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.elevateStyle .container .bottom .cards .card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+
+}
+
+.elevateStyle .container .bottom .cards .card .cardTop {
+    /* background-color: red; */
+    height: 60px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.elevateStyle .container .bottom .cards .card .cardTop .tag {
+    background-color: #1A1A1A;
+    padding: 10px 16px;
+    border-radius: 100px;
+    border: 2px dashed #333;
+    color: #B3B3B2;
+}
+.elevateStyle .container .bottom .cards .card .cardTop .shopBtn {
+    background-color: #1A1A1A;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: #B3B3B2;
+}
+
+.elevateStyle .cardBottom .meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #81807E;
+}
+
+.elevateStyle .cardBottom .nameFit {
+    color: #fff;
+    font-weight: 600;
+}
+
+.elevateStyle .cardBottom .shar {
+    width: 5px;
+    height: 5px;
+    background: #333;
+    border-radius: 50%;
+}
+
+/* расстояние между Fit и Price */
+.elevateStyle .cardBottom .space {
+    width: 16px;
 }

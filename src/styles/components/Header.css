@@ -2,38 +2,49 @@ header {
     margin-top: 30px;
 }
 
-.active {
-    background-color: #1A1A1A;
-}
-
 header .container {
     display: flex;
-    /* background-color: aqua; */
     justify-content: space-between;
     align-items: center;
 }
 
+/* списки */
 header .container .left ul,
 header .container .right ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
+/* чтобы NavLink не ломал стили */
+header .container .left ul a {
+    text-decoration: none;
+}
+
+/* пункты меню */
 header .container .left ul li {
     display: inline-block;
-    /* background-color: aqua; */
     padding: 18px 30px;
     border-radius: 12px;
+    border: 2px dashed #333;
     margin-right: 15px;
     color: #B3B3B2;
+    cursor: pointer;
 }
 
+/* активная ссылка */
+header .container .left ul li.active {
+    background-color: #1A1A1A;
+    border: none;
+}
+
+/* Products кнопка */
 header .container .left ul li.linkLeft {
     border: 2px dashed #262626;
 }
 
-
+/* правая часть */
 header .container .right ul {
-    list-style-type: none;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -48,6 +59,7 @@ header .container .right ul li {
     border-radius: 12px;
 }
 
+/* корзина */
 header .container .right .cartNav {
     background-color: #1A1A1A;
     padding: 18px;
@@ -57,6 +69,7 @@ header .container .right ul li img {
     display: block;
 }
 
+/* контакт */
 header .container .right ul li.link {
     padding: 18px 30px;
 }
