@@ -130,6 +130,10 @@
     margin-top: 15px;
 }
 
+.crafting {
+    margin-top: 60px;
+}
+
 .crafting .container {
     border: 2px dashed #333333;
     border-radius: 12px 12px 0 0;
@@ -155,13 +159,142 @@
 }
 
 .crafting .container .bottom .cards {
-    /* background-color: aqua; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 100%;
+    gap: 0; /* можно добавить gap, если нужно расстояние между карточками */
+    width: 100%;
 }
 
 .crafting .container .bottom .cards .card {
-    display: inline-block;
-    width: calc(100% / 3);
+    position: relative;
+    display: block; /* или оставить по умолчанию */
+    width: 100%; /* не обязательно, grid задаёт колонки */
+    height: 400px; /* можно указать желаемую высоту */
+    padding: 60px;
+    /* background-color: red; */
+}
+
+.crafting .container .bottom .cards .card .cardFon {
+    float: right;
+    margin-top: -60px;
+    margin-right: -60px;
+}
+
+.crafting .container .bottom .cards .card .info {
+    margin-top: 30px;
+    /* background-color: aqua; */
+}
+
+.crafting .container .bottom .cards .card .info h1 {
+    font-size: 30px;
+}
+
+.crafting .container .bottom .cards .card .info p {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #81807E;
+}
+
+
+.crafting .container .bottom .cards .card .image img {
+    background-color: #262626;
+    padding: 16px;
+    border-radius: 100px;
+}
+
+
+.crafting .container .bottom .cards .card:nth-child(1) {
+    border-bottom: 2px dashed #333;
+    border-right: 2px dashed #333;
+}
+
+.crafting .container .bottom .cards .card:nth-child(2) {
+    border-bottom: 2px dashed #333;
+    border-right: 2px dashed #333;
+}
+
+.crafting .container .bottom .cards .card:nth-child(3) {
+    border-bottom: 2px dashed #333;
+}
+
+.crafting .container .bottom .cards .card:nth-child(4) {
+    border-right: 2px dashed #333;
+}
+
+.crafting .container .bottom .cards .card:nth-child(5) {
+    border-right: 2px dashed #333;
+}
+
+.navigating .container {
+    margin-top: 60px;
+    border: 2px dashed #333;
+    border-radius: 12px;
+}
+
+.navigating .top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed #333;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.navigating .top .text {
+    flex: 1;
+    /* background-color: aqua; */
+    padding: 60px;
+    height: 300px;
+
+}
+
+.navigating .top .text h1 {
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.navigating .top .text p {
+    font-size: 20px;
+    color: #B3B3B2;
+    line-height: 1.5;
+}
+
+.navigating .top img {
+    height: 300px;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.navigating .bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.navigating .bottom .card {
+    padding: 50px;
+
+}
+
+.navigating .bottom .card h3 {
+    color: #676665;
+    margin-bottom: 30px;
+}
+
+.navigating .bottom .card h2 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.navigating .bottom .card p {
+    color: #81807E;
+    font-size: 18px;
+}
+
+
+.navigating .bottom .card:nth-child(1),
+.navigating .bottom .card:nth-child(2),
+.navigating .bottom .card:nth-child(3) {
+    border-right: 2px dashed #333;
 }

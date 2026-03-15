@@ -3,6 +3,13 @@ import "../styles/pages/Home.css"
 import woman from "../assets/woman.png"
 import share from "../assets/share.svg"
 
+import star from "../assets/star.svg"
+import fashion from "../assets/fashion.svg"
+import navigating from "../assets/navigating.svg"
+
+import star_fon from "../assets/star_fon.svg"
+import fashion_fon from "../assets/fashion_fon.svg"
+
 export default function App() {
   return (
     <>
@@ -63,23 +70,99 @@ export default function App() {
           <div className="bottom">
             <div className="cards">
               <div className="card">
-                <h1>Привет</h1>
+                <img className="cardFon" src={star_fon} alt="" />
+                <div className="image">
+                  <img src={star} alt="" />
+                </div>
+                <div className="info">
+                  <h1>Passionate Craftsmanship</h1>
+                  <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
+                </div>
               </div>
               <div className="card">
-                <h1>Привет</h1>
+                <img className="cardFon" src={fashion_fon} alt="" />
+                <div className="image">
+                  <img src={fashion} alt="" />
+                </div>
+                <div className="info">
+                  <h1>Passionate Craftsmanship</h1>
+                  <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
+                </div>
               </div>
               <div className="card">
-                <h1>Привет</h1>
+                <img className="cardFon" src={star_fon} alt="" />
+                <div className="image">
+                  <img src={star} alt="" />
+                </div>
+                <div className="info">
+                  <h1>Passionate Craftsmanship</h1>
+                  <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
+                </div>
               </div>
               <div className="card">
-                <h1>Привет</h1>
+                <img className="cardFon" src={star_fon} alt="" />
+                <div className="image">
+                  <img src={star} alt="" />
+                </div>
+                <div className="info">
+                  <h1>Passionate Craftsmanship</h1>
+                  <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
+                </div>
               </div>
               <div className="card">
-                <h1>Привет</h1>
+                <img className="cardFon" src={star_fon} alt="" />
+                <div className="image">
+                  <img src={star} alt="" />
+                </div>
+                <div className="info">
+                  <h1>Passionate Craftsmanship</h1>
+                  <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
+                </div>
               </div>
               <div className="card">
-                <h1>Привет</h1>
+                <img className="cardFon" src={star_fon} alt="" />
+                <div className="image">
+                  <img src={star} alt="" />
+                </div>
+                <div className="info">
+                  <h1>Passionate Craftsmanship</h1>
+                  <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="navigating">
+        <div className="container">
+          <div className="top">
+            <div className="text">
+              <h1>Navigating the StyleLoom Fashion Journey.</h1>
+              <p>At StyleLoom, we've designed a straightforward shopping experience to make fashion accessible.</p>
+            </div>
+            <img src={navigating} alt="Decor" />
+          </div>
+
+          <div className="bottom">
+            <div className="card">
+              <h3>Step 01</h3>
+              <h2>Discover Trends</h2>
+              <p>Explore our curated collection of over 1000 styles, spanning global fashion trends.</p>
+            </div>
+            <div className="card">
+              <h3>Step 02</h3>
+              <h2>Effortless Navigation</h2>
+              <p>Intuitive filters and categories help you find the perfect pieces tailored to your style.</p>
+            </div>
+            <div className="card">
+              <h3>Step 03</h3>
+              <h2>Secure Checkout</h2>
+              <p>Multiple payment options and encrypted transactions ensure a safe and hassle-free purchase.</p>
+            </div>
+            <div className="card">
+              <h3>Step 04</h3>
+              <h2>Unbox Happiness</h2>
+              <p>Unbox a fashion-forward experience delivered right to your door, ready to elevate your style.</p>
             </div>
           </div>
         </div>
