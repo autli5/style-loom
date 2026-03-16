@@ -45,7 +45,6 @@
     width: 50%;
     display: inline-block;
     border-left: 2px dashed #262626;
-    border-right: 2px dashed #262626;
     border-bottom: 2px dashed #262626;
     border-radius: 0 0 0 12px;
 
@@ -87,9 +86,10 @@
 
 .styleloom .container .right {
     border-right: 2px dashed #262626;
-    border-bottom: 2px dashed #262626;
     width: 50%;
     border-radius: 0 0 12px 0;
+    border-bottom: 2px dashed #333;
+    border-left: 2px dashed #333;
 }
 
 
@@ -102,11 +102,11 @@
 /* 1 карточка — только снизу */
 .styleloom .right .cards .card:nth-child(1) {
     border-bottom: 2px dashed #262626;
+    border-right: 2px dashed #262626;
 }
 
 /* 2 карточка — слева и снизу */
 .styleloom .right .cards .card:nth-child(2) {
-    border-left: 2px dashed #262626;
     border-bottom: 2px dashed #262626;
 }
 
@@ -136,12 +136,11 @@
 }
 
 .crafting .container {
-    border: 2px dashed #333333;
     border-radius: 12px 12px 0 0;
 }
 
 .crafting .container .top {
-    border-bottom: 2px dashed #333333;
+    border: 2px dashed #333333;
 }
 
 .crafting .container .top h1 {
@@ -162,12 +161,15 @@
 
 .crafting .container .bottom .cards {
     display: grid;
+    border-right: 2px dashed #333;
+    border-left: 2px dashed #333;
+    border-bottom: 2px dashed #333;
     grid-template-columns: repeat(3, 1fr);
     gap: 0; /* можно добавить gap, если нужно расстояние между карточками */
     width: 100%;
 }
 
-.crafting .container .bottom .cards .card {
+.crafting .container .bottom .cards .cardCrafting {
     position: relative;
     display: block; /* или оставить по умолчанию */
     width: 100%; /* не обязательно, grid задаёт колонки */
@@ -176,55 +178,49 @@
     /* background-color: red; */
 }
 
-.crafting .container .bottom .cards .card .cardFon {
-    float: right;
-    margin-top: -60px;
-    margin-right: -60px;
-}
-
-.crafting .container .bottom .cards .card .info {
+.crafting .container .bottom .cards .cardCrafting .info {
     margin-top: 30px;
     /* background-color: aqua; */
 }
 
-.crafting .container .bottom .cards .card .info h1 {
+.crafting .container .bottom .cards .cardCrafting .info h1 {
     font-size: 30px;
     color: #fff;
 }
 
-.crafting .container .bottom .cards .card .info p {
+.crafting .container .bottom .cards .cardCrafting .info p {
     font-size: 18px;
     margin-top: 20px;
     color: #81807E;
 }
 
 
-.crafting .container .bottom .cards .card .image img {
+.crafting .container .bottom .cards .cardCrafting .image img {
     background-color: #262626;
     padding: 16px;
     border-radius: 100px;
 }
 
 
-.crafting .container .bottom .cards .card:nth-child(1) {
+.crafting .container .bottom .cards .cardCrafting:nth-child(1) {
     border-bottom: 2px dashed #333;
     border-right: 2px dashed #333;
 }
 
-.crafting .container .bottom .cards .card:nth-child(2) {
+.crafting .container .bottom .cards .cardCrafting:nth-child(2) {
     border-bottom: 2px dashed #333;
     border-right: 2px dashed #333;
 }
 
-.crafting .container .bottom .cards .card:nth-child(3) {
+.crafting .container .bottom .cards .cardCrafting:nth-child(3) {
     border-bottom: 2px dashed #333;
 }
 
-.crafting .container .bottom .cards .card:nth-child(4) {
+.crafting .container .bottom .cards .cardCrafting:nth-child(4) {
     border-right: 2px dashed #333;
 }
 
-.crafting .container .bottom .cards .card:nth-child(5) {
+.crafting .container .bottom .cards .cardCrafting:nth-child(5) {
     border-right: 2px dashed #333;
 }
 
@@ -373,67 +369,65 @@
 
 .elevateStyle .bottom .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+    gap: 20px; /* расстояние между карточками */
+    padding: 20px;
 }
 
-.elevateStyle .container .bottom .cards .card {
-    padding: 30px;
+/* карточка */
+.elevateStyle .bottom .cards .cardElevate {
+    display: flex;
+    flex-direction: column;
+    background-color: #1A1A1A;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-
-.elevateStyle .container .bottom .cards .card:nth-child(1),
-.elevateStyle .container .bottom .cards .card:nth-child(2),
-.elevateStyle .container .bottom .cards .card:nth-child(4),
-.elevateStyle .container .bottom .cards .card:nth-child(5) {
-    border-right: 2px dashed #333;
-}
-
-.elevateStyle .container .bottom .cards .card:nth-child(1),
-.elevateStyle .container .bottom .cards .card:nth-child(2),
-.elevateStyle .container .bottom .cards .card:nth-child(3) {
-    border-bottom: 2px dashed #333;
-}
-
-
-.elevateStyle .container .bottom .cards .card h3 {
-    margin-top: 15px;
-    font-size: 20px;
-    color: #fff;
-}
-
-
-.elevateStyle .container .bottom .cards .card img {
+/* изображение */
+.elevateStyle .bottom .cards .cardElevate img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
-
 }
 
-.elevateStyle .container .bottom .cards .card .cardTop {
-    /* background-color: red; */
+/* верх карточки (тег + кнопка) */
+.elevateStyle .bottom .cards .cardElevate .cardTop {
     height: 60px;
-    padding-top: 15px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.elevateStyle .container .bottom .cards .card .cardTop .tag {
+.elevateStyle .bottom .cards .cardElevate .cardTop .tag {
     background-color: #1A1A1A;
     padding: 10px 16px;
     border-radius: 100px;
     border: 2px dashed #333;
     color: #B3B3B2;
 }
-.elevateStyle .container .bottom .cards .card .cardTop .shopBtn {
+
+.elevateStyle .bottom .cards .cardElevate .cardTop .shopBtn {
     background-color: #1A1A1A;
     padding: 10px 16px;
     border-radius: 12px;
     color: #B3B3B2;
+    text-decoration: none;
 }
 
-.elevateStyle .cardBottom .meta {
+/* нижняя часть карточки */
+.elevateStyle .bottom .cards .cardElevate .cardBottom {
+    padding: 15px;
+}
+
+.elevateStyle .bottom .cards .cardElevate .cardBottom h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.elevateStyle .bottom .cards .cardElevate .cardBottom .meta {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -442,12 +436,12 @@
     color: #81807E;
 }
 
-.elevateStyle .cardBottom .nameFit {
+.elevateStyle .bottom .cards .cardElevate .cardBottom .nameFit {
     color: #fff;
     font-weight: 600;
 }
 
-.elevateStyle .cardBottom .shar {
+.elevateStyle .bottom .cards .cardElevate .cardBottom .shar {
     width: 5px;
     height: 5px;
     background: #333;
@@ -455,6 +449,20 @@
 }
 
 /* расстояние между Fit и Price */
-.elevateStyle .cardBottom .space {
+.elevateStyle .bottom .cards .cardElevate .cardBottom .space {
     width: 16px;
+}
+
+/* адаптив: планшет 2 карточки в ряд */
+@media (max-width: 1024px) {
+    .elevateStyle .bottom .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* адаптив: мобильный 1 карточка в ряд */
+@media (max-width: 600px) {
+    .elevateStyle .bottom .cards {
+        grid-template-columns: 1fr;
+    }
 }

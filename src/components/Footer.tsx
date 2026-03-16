@@ -120,6 +120,9 @@ export default function Footer() {
                         <span>Terms & Conditions</span>
                         <span>Privacy Policy</span>
                     </div>
+                    <div className="author">
+                        <p>Сайт создал <a href="">@autli</a></p>
+                    </div>
                 </div>
             </div>
         </footer>

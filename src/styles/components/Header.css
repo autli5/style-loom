@@ -50,6 +50,11 @@ header .container .right ul {
     gap: 15px;
 }
 
+header .container .right ul a {
+    text-decoration: none;
+}
+
+
 header .container .right ul li {
     display: flex;
     align-items: center;

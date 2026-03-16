@@ -1,3 +1,5 @@
+import { products } from "../data/products"
+
 import "../styles/pages/Home.css"
 
 import woman from "../assets/woman.png"
@@ -72,7 +74,7 @@ export default function App() {
           </div>
           <div className="bottom">
             <div className="cards">
-              <div className="card">
+              <div className="cardCrafting">
                 <img className="cardFon" src={star_fon} alt="" />
                 <div className="image">
                   <img src={star} alt="" />
@@ -82,7 +84,7 @@ export default function App() {
                   <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
                 </div>
               </div>
-              <div className="card">
+              <div className="cardCrafting">
                 <img className="cardFon" src={fashion_fon} alt="" />
                 <div className="image">
                   <img src={fashion} alt="" />
@@ -92,7 +94,7 @@ export default function App() {
                   <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
                 </div>
               </div>
-              <div className="card">
+              <div className="cardCrafting">
                 <img className="cardFon" src={star_fon} alt="" />
                 <div className="image">
                   <img src={star} alt="" />
@@ -102,7 +104,7 @@ export default function App() {
                   <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
                 </div>
               </div>
-              <div className="card">
+              <div className="cardCrafting">
                 <img className="cardFon" src={star_fon} alt="" />
                 <div className="image">
                   <img src={star} alt="" />
@@ -112,7 +114,7 @@ export default function App() {
                   <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
                 </div>
               </div>
-              <div className="card">
+              <div className="cardCrafting">
                 <img className="cardFon" src={star_fon} alt="" />
                 <div className="image">
                   <img src={star} alt="" />
@@ -122,7 +124,7 @@ export default function App() {
                   <p>Every garment at StyleLoom is crafted with passion, reflecting our commitment to quality and innovation.</p>
                 </div>
               </div>
-              <div className="card">
+              <div className="cardCrafting">
                 <img className="cardFon" src={star_fon} alt="" />
                 <div className="image">
                   <img src={star} alt="" />
@@ -187,151 +189,34 @@ export default function App() {
           </div>
           <div className="bottom">
             <div className="cards">
+              {products.map((product) => (
+                <div className="cardElevate" key={product.id}>
+                  <div className="image">
+                    <img src={product.image} alt={product.title} />
+                  </div>
 
-              <div className="card">
-                <div className="image">
-                  <img src={product1} alt="" />
-                </div>
+                  <div className="cardTop">
+                    <span className="tag">{product.category}</span>
+                    <a className="shopBtn">Shop Now ↗</a>
+                  </div>
 
-                <div className="cardTop">
-                  <span className="tag">Womenswear</span>
-                  <a className="shopBtn">Shop Now ↗</a>
-                </div>
-                <div className="cardBottom">
-                  <h3>Timeless A-line Evening Dress</h3>
-                  <div className="meta">
-                    <span>Fit</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">Ankle-length</span>
+                  <div className="cardBottom">
+                    <h3>{product.title}</h3>
 
-                    <span className="space"></span>
+                    <div className="meta">
+                      <span>Fit</span>
+                      <span className="shar"></span>
+                      <span className="nameFit">{product.fit}</span>
 
-                    <span>Price</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">$109.99</span>
+                      <span className="space"></span>
+
+                      <span>Price</span>
+                      <span className="shar"></span>
+                      <span className="nameFit">${product.price}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="card">
-                <div className="image">
-                  <img src={product1} alt="" />
-                </div>
-
-                <div className="cardTop">
-                  <span className="tag">Womenswear</span>
-                  <a className="shopBtn">Shop Now ↗</a>
-                </div>
-                <div className="cardBottom">
-                  <h3>Timeless A-line Evening Dress</h3>
-                  <div className="meta">
-                    <span>Fit</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">Ankle-length</span>
-
-                    <span className="space"></span>
-
-                    <span>Price</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">$109.99</span>
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="image">
-                  <img src={product1} alt="" />
-                </div>
-
-                <div className="cardTop">
-                  <span className="tag">Womenswear</span>
-                  <a className="shopBtn">Shop Now ↗</a>
-                </div>
-                <div className="cardBottom">
-                  <h3>Timeless A-line Evening Dress</h3>
-                  <div className="meta">
-                    <span>Fit</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">Ankle-length</span>
-
-                    <span className="space"></span>
-
-                    <span>Price</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">$109.99</span>
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="image">
-                  <img src={product1} alt="" />
-                </div>
-
-                <div className="cardTop">
-                  <span className="tag">Womenswear</span>
-                  <a className="shopBtn">Shop Now ↗</a>
-                </div>
-                <div className="cardBottom">
-                  <h3>Timeless A-line Evening Dress</h3>
-                  <div className="meta">
-                    <span>Fit</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">Ankle-length</span>
-
-                    <span className="space"></span>
-
-                    <span>Price</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">$109.99</span>
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="image">
-                  <img src={product1} alt="" />
-                </div>
-
-                <div className="cardTop">
-                  <span className="tag">Womenswear</span>
-                  <a className="shopBtn">Shop Now ↗</a>
-                </div>
-                <div className="cardBottom">
-                  <h3>Timeless A-line Evening Dress</h3>
-                  <div className="meta">
-                    <span>Fit</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">Ankle-length</span>
-
-                    <span className="space"></span>
-
-                    <span>Price</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">$109.99</span>
-                  </div>
-                </div>
-              </div>
-              <div className="card">
-                <div className="image">
-                  <img src={product1} alt="" />
-                </div>
-
-                <div className="cardTop">
-                  <span className="tag">Womenswear</span>
-                  <a className="shopBtn">Shop Now ↗</a>
-                </div>
-                <div className="cardBottom">
-                  <h3>Timeless A-line Evening Dress</h3>
-                  <div className="meta">
-                    <span>Fit</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">Ankle-length</span>
-
-                    <span className="space"></span>
-
-                    <span>Price</span>
-                    <span className="shar"></span>
-                    <span className="nameFit">$109.99</span>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { dress, accessories, bags } from "../data/products"
+
 import "../styles/pages/Product.css"
 
 import explore from "../assets/explore.svg"
@@ -39,78 +41,33 @@ export default function Product() {
             <div className="dressCards">
                 <div className="container">
                     <div className="cards">
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
+                        {dress.map((product) => (
+                            <div className="cardProduct" key={product.id}>
+                                <div className="image">
+                                    <img src={product.image} alt={product.title} />
+                                </div>
 
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
+                                <div className="cardTop">
+                                    <span className="tag">{product.category}</span>
+                                    <a className="shopBtn">Shop Now ↗</a>
+                                </div>
 
-                                <span className="space"></span>
+                                <div className="cardBottom">
+                                    <h3>{product.title}</h3>
+                                    <div className="meta">
+                                    <span>Fit</span>
+                                    <span className="shar"></span>
+                                    <span className="nameFit">{product.fit}</span>
 
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
+                                    <span className="space"></span>
 
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
+                                    <span>Price</span>
+                                    <span className="shar"></span>
+                                    <span className="nameFit">${product.price}</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
-
-                                <span className="space"></span>
-
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
-
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
-
-                                <span className="space"></span>
-
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -126,80 +83,35 @@ export default function Product() {
             </div>
             <div className="dressCards">
                 <div className="container">
-                    <div className="cards">
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
+                        <div className="cards">
+                            {accessories.map((product) => (
+                                <div className="cardProduct" key={product.id}>
+                                    <div className="image">
+                                        <img src={product.image} alt={product.title} />
+                                    </div>
 
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
+                                    <div className="cardTop">
+                                        <span className="tag">{product.category}</span>
+                                        <a className="shopBtn">Shop Now ↗</a>
+                                    </div>
 
-                                <span className="space"></span>
+                                    <div className="cardBottom">
+                                        <h3>{product.title}</h3>
+                                        <div className="meta">
+                                            <span>Fit</span>
+                                            <span className="shar"></span>
+                                            <span className="nameFit">{product.fit}</span>
 
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
+                                            <span className="space"></span>
+
+                                            <span>Price</span>
+                                            <span className="shar"></span>
+                                            <span className="nameFit">${product.price}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
-
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
-
-                                <span className="space"></span>
-
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
-
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
-
-                                <span className="space"></span>
-
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div className="accessories">
@@ -215,79 +127,34 @@ export default function Product() {
             <div className="dressCards">
                 <div className="container">
                     <div className="cards">
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
+                        {bags.map((product) => (
+                            <div className="cardProduct" key={product.id}>
+                                <div className="image">
+                                    <img src={product.image} alt={product.title} />
+                                </div>
 
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
+                                <div className="cardTop">
+                                    <span className="tag">{product.category}</span>
+                                    <a className="shopBtn">Shop Now ↗</a>
+                                </div>
 
-                                <span className="space"></span>
+                                <div className="cardBottom">
+                                    <h3>{product.title}</h3>
+                                    <div className="meta">
+                                    <span>Fit</span>
+                                    <span className="shar"></span>
+                                    <span className="nameFit">{product.fit}</span>
 
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
+                                    <span className="space"></span>
+
+                                    <span>Price</span>
+                                    <span className="shar"></span>
+                                    <span className="nameFit">${product.price}</span>
+                                    </div>
+                                </div>
                             </div>
-                            </div>
+                        ))}
                         </div>
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
-
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
-
-                                <span className="space"></span>
-
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="image">
-                            <img src={product1} alt="" />
-                            </div>
-
-                            <div className="cardTop">
-                            <span className="tag">Womenswear</span>
-                            <a className="shopBtn">Shop Now ↗</a>
-                            </div>
-                            <div className="cardBottom">
-                            <h3>Timeless A-line Evening Dress</h3>
-                            <div className="meta">
-                                <span>Fit</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">Ankle-length</span>
-
-                                <span className="space"></span>
-
-                                <span>Price</span>
-                                <span className="shar"></span>
-                                <span className="nameFit">$109.99</span>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </>

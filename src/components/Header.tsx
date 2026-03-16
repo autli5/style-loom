@@ -25,7 +25,9 @@ export default function Header() {
                 <div className="right">
                     <ul>
                         <li className="cartNav"><img src={cart} alt="" /></li>
-                        <li className="link">Contact</li>
+                        <NavLink to="/contacts">
+                        {({ isActive }) => <li className={`link ${isActive ? "active" : ""}`}>Contact</li>}
+                        </NavLink>
                     </ul>
                 </div>
             </div>

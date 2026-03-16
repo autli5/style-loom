@@ -138,6 +138,12 @@ footer {
     cursor: pointer;
 }
 
+.author a {
+    text-decoration: none;
+    color:#C2B4A3;
+    font-weight: 600;
+}
+
 @keyframes scroll {
     from {
         transform: translateX(0);
