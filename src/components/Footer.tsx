@@ -121,7 +121,7 @@ export default function Footer() {
                         <span>Privacy Policy</span>
                     </div>
                     <div className="author">
-                        <p>Сайт создал <a href="">@autli</a></p>
+                        <p>Сайт создал <a href="https://autli5.github.io/portfolio/">@autli</a></p>
                     </div>
                 </div>
             </div>
