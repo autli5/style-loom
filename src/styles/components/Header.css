@@ -78,3 +78,70 @@ header .container .right ul li img {
 header .container .right ul li.link {
     padding: 18px 30px;
 }
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        margin-top: 20px;
+    }
+
+    header .container {
+        padding: 0 15px;
+    }
+
+    /* скрываем меню */
+    header .container .left,
+    header .container .right ul {
+        display: none;
+    }
+
+    /* центр = лого слева */
+    header .container {
+        justify-content: space-between;
+    }
+
+    header .container .center {
+        order: 1;
+    }
+
+    header .container .center img {
+        height: 28px;
+    }
+
+    /* бургер */
+    header .container .right {
+        display: block;
+        order: 2;
+    }
+
+    .burger {
+        width: 60px;
+        height: 60px;
+        background-color: #AE9B84;
+        border-radius: 16px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .burger span {
+        width: 22px;
+        height: 2px;
+        background-color: #1A1A1A;
+        display: block;
+    }
+
+    /* пунктирная линия */
+    header::after {
+        content: "";
+        display: block;
+        margin-top: 20px;
+        border-bottom: 2px dashed #2A2A2A;
+        opacity: 0.5;
+    }
+}

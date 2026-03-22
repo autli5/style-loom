@@ -23,6 +23,11 @@ export default function Header() {
                     <img src={logo} alt="" />
                 </div>
                 <div className="right">
+                    <div className="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <ul>
                         <li className="cartNav"><img src={cart} alt="" /></li>
                         <NavLink to="/contacts">

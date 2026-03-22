@@ -13,7 +13,6 @@ import elevate from "../assets/elevate.svg"
 import star_fon from "../assets/star_fon.svg"
 import fashion_fon from "../assets/fashion_fon.svg"
 
-import product1 from "../assets/product1.png";
 
 export default function App() {
   return (

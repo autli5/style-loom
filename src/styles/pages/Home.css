@@ -453,16 +453,280 @@
     width: 16px;
 }
 
-/* адаптив: планшет 2 карточки в ряд */
-@media (max-width: 1024px) {
-    .elevateStyle .bottom .cards {
-        grid-template-columns: repeat(2, 1fr);
+
+
+/* =========================
+   GLOBAL MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    h1 {
+        line-height: 1.2;
+    }
+
+}
+
+/* =========================
+   ELEVATE (баннер)
+========================= */
+@media (max-width: 768px) {
+
+    .elevate {
+        margin-top: 20px;
+    }
+
+    .elevate .container img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .elevate .container .shopNow {
+        transform: translateY(-20px);
+        padding: 12px 18px;
+        font-size: 14px;
     }
 }
 
-/* адаптив: мобильный 1 карточка в ряд */
-@media (max-width: 600px) {
+/* =========================
+   STYLELOOM (главный блок)
+========================= */
+@media (max-width: 768px) {
+
+    .styleloom .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: -60px;
+        padding: 20px 0;
+    }
+
+    .styleloom .container .left,
+    .styleloom .container .right {
+        width: 100%;
+        border: none;
+    }
+
+    .styleloom .container .left {
+        margin-top: 60px;
+    }
+
+
+    /* категории */
+    .styleloom .container .left ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    .styleloom .container .left ul li {
+        margin: 0;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* текст */
+    .styleloom .container .left h1 {
+        font-size: 26px;
+        margin: 20px 15px;
+    }
+
+    .styleloom .container .left p {
+        width: auto;
+        margin: 0 15px 20px;
+        font-size: 14px;
+    }
+
+    /* карточки */
+    .styleloom .container .right .cards {
+        grid-template-columns: repeat(2, 1fr);
+        border: 2px dashed #262626;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .styleloom .container .right .cards .card {
+        border: 1px dashed #262626 !important;
+    }
+
+    .styleloom .container .right .cards .info {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .styleloom .container .right .cards .info h1 {
+        font-size: 20px;
+    }
+
+    .styleloom .container .right .cards .info p {
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   CRAFTING
+========================= */
+@media (max-width: 768px) {
+
+    .crafting {
+        margin-top: 40px;
+    }
+
+    .crafting .container .top h1 {
+        font-size: 22px;
+    }
+
+    .crafting .container .top p {
+        font-size: 14px;
+    }
+
+    .crafting .container .bottom .cards {
+        grid-template-columns: 1fr;
+        border: 2px dashed #333;
+    }
+
+    .crafting .container .bottom .cards .cardCrafting {
+        height: auto;
+        padding: 30px;
+        border-bottom: 2px dashed #333;
+    }
+
+    .crafting .container .bottom .cards .cardCrafting .info h1 {
+        font-size: 20px;
+    }
+
+    .crafting .container .bottom .cards .cardCrafting .info p {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   NAVIGATING
+========================= */
+@media (max-width: 768px) {
+
+    .navigating .container {
+        margin-top: 40px;
+    }
+
+    .navigating .top {
+        flex-direction: column;
+    }
+
+    .navigating .top img {
+        display: none;
+    }
+
+    .navigating .top .text {
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .navigating .top .text h1 {
+        font-size: 24px;
+    }
+
+    .navigating .top .text p {
+        font-size: 14px;
+    }
+
+    .navigating .bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .navigating .bottom .card {
+        padding: 25px;
+        border-bottom: 2px dashed #333;
+    }
+
+    .navigating .bottom .card h2 {
+        font-size: 18px;
+    }
+
+    .navigating .bottom .card p {
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   ELEVATE STYLE (товары)
+========================= */
+@media (max-width: 768px) {
+
+    .elevateStyle {
+        margin-top: 50px;
+    }
+
+    .elevateStyle .top {
+        flex-direction: column;
+    }
+
+    .elevateStyle .top img {
+        display: none;
+    }
+
+    .elevateStyle .top .text {
+        padding: 30px 15px;
+    }
+
+    .elevateStyle .top .text h1 {
+        font-size: 24px;
+    }
+
+    .elevateStyle .top .text p {
+        font-size: 14px;
+    }
+
+    .elevateStyle .top ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .elevateStyle .top ul li {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    /* карточки */
     .elevateStyle .bottom .cards {
         grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .elevateStyle .bottom .cards .cardElevate img {
+        height: 200px;
+    }
+    
+    .elevateStyle .bottom .cards .cardElevate .cardBottom h3 {
+        font-size: 16px;
+    }
+
+    .elevateStyle .bottom .cards .cardElevate .cardBottom .meta {
+        font-size: 12px;
+    }
+
+    .reklamaBox {
+        position: relative;
+        z-index: -5;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* кнопка — в поток */
+    .buyBtn {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+    /* декор — либо вниз, либо скрыть */
+    .decor {
+        position: absolute;
+        z-index: -5;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
     }
 }
